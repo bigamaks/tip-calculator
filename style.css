@@ -1,9 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Varela+Round&display=swap");
+
 body {
   background-color: hsl(185, 41%, 84%);
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  font-family: "League Spartan", sans-serif;
+  font-weight: 700;
 }
 .box {
   background-color: white;
@@ -13,7 +17,7 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   max-width: 800px;
 }
-.box-one{
+.box-one {
   padding-right: 2rem;
   width: 50%;
 }
@@ -22,20 +26,25 @@ label {
   font-size: 14px;
   font-weight: bold;
   color: #5c677d;
+  margin-top: 25px;
 }
 
 input {
   width: 100%;
   padding: 10px;
-  font-size: 18px;
+  font-size: 24px;
   border: none;
-  background: #f3f7fa;
+  background: hsl(189, 41%, 97%);
   border-radius: 5px;
   margin-bottom: 1rem;
+  color: hsl(183, 100%, 15%);
+}
+
+input [type="number"]:focus {
+  border: 2px solid red;
 }
 .box-two {
   background-color: hsl(183, 100%, 15%);
-  /* background: #004d43; */
   padding: 2rem;
   border-radius: 10px;
   width: 50%;
@@ -48,9 +57,10 @@ input {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
+  margin-bottom: 20px;
 }
-button{
-  background: #004d43;
+button {
+  background: hsl(183, 100%, 15%);
   color: white;
   border: none;
   padding: 10px;
@@ -60,23 +70,29 @@ button{
   cursor: pointer;
   transition: 0.3s;
 }
-.numPeople{
+button:hover {
+  background: hsl(185, 41%, 84%);
+  color: hsl(183, 100%, 15%);
+}
+.custom{
+  background: hsl(189, 41%, 97%);
+  color: hsl(183, 100%, 15%);
+}
+.numPeople {
   padding-top: 20px;
 }
 
-/* .tip-per-person{
-  display:flex;
+.tip-per-person {
+  display: flex;
   justify-content: space-between;
-  margin-top:10px;
 }
-.total-per-person{
-  display:flex;
+.total-per-person {
+  display: flex;
   justify-content: space-between;
-} */
+}
 .reset {
-  background-color: hsl(185, 41%, 84%);
-  /* background: #30b4a3; */
-  color: #004d43;
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
   border: none;
   padding: 15px;
   font-size: 18px;
@@ -85,25 +101,37 @@ button{
   cursor: pointer;
   transition: 0.3s;
 }
+.reset:hover {
+  background: hsl(185, 41%, 84%);
+}
+#tip-person,
+#total-person {
+  font-size: 24px;
+  font-weight: 700;
+  color: hsl(172, 67%, 45%);
+}
 
+.per{
+  font-size: 13px;
+}
 @media (max-width: 768px) {
   .box {
     flex-direction: column;
     max-width: 90%;
     padding: 1.5rem;
   }
-  .box-one{
+  .box-one {
     width: 100%;
   }
-  .box-two{
+  .box-two {
     width: 85%;
     margin-top: 1rem;
     padding: 1.5rem;
   }
-  .five{
-    grid-template-columns: repeat(2, 1fr)
+  .five {
+    grid-template-columns: repeat(2, 1fr);
   }
-  input{
+  input {
     width: 95%;
   }
 }

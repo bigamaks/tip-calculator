@@ -19,12 +19,10 @@
   </style> -->
   </head>
   <body>
-
 <div class="box">
   <div class="box-one">
-    <p ></p>
-    <label for="bill" id="error">Bill Amount:</label>
-    <input type="" name="" id="bill">
+    <label for="bill" id="error">Bill</label>
+    <input type="" name="" id="bill" placeholder="">
     <div>
       <p>Select Tip</p>
       <div class="five">
@@ -33,8 +31,8 @@
         <button class="tip-btn" data-tip="15">15%</button>
         <button class="tip-btn" data-tip="25">25%</button>
         <button class="tip-btn" data-tip="50">50%</button>
-        <button class="tip-btn custom" data-tip="40">Custom</button>
-        <input type="number" id="custom-tip" placeholder="Enter %" style="display: none;">
+        <button class="tip-btn custom">Custom</button>
+        <!-- <input type="number" id="custom-tip" placeholder="Enter %" style="display: none;"> -->
       </div>
     </div>
     <div class="numPeople">
@@ -44,15 +42,15 @@
     </div>
   </div>
   <div class="box-two">
-    <dgitiv class="tip-per-person">
-      <p class="tip">Tip amount / person</p>
+    <div class="tip-per-person">
+      <p class="tip">Tip amount <br/> <span class="per">/ person</span> </p>
       <p id="tip-person">$0.00</p>
     </div>
     <div class="total-per-person">
-    <p>Total amount / person</p>
-    <p class="total-person">$0.00</p>
+    <p>Total amount <br/> <span class="per">/ person</span></p>
+    <p id="total-person">$0.00</p>
     </div>
-    <div class="reset">Reset</div>
+    <div class="reset">RESET</div>
   </div>
 </div>
 
