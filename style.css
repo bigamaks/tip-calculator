@@ -69,6 +69,9 @@ button {
   border-radius: 5px;
   cursor: pointer;
   transition: 0.3s;
+  height: 40px;
+  /* display: flex; */
+  max-width: 150px;
 }
 button:hover {
   background: hsl(185, 41%, 84%);

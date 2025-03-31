@@ -12,10 +12,10 @@ let selectedTip = 0;
 
 function createCustomInput() {
   let input = document.createElement("input");
-  input.type = "number";
   input.placeholder = "Enter Tip %";
   input.classList.add("custom-tip-input");
-  input.style.width = "60px"; // Adjust width as needed
+  input.style.maxWidth = "60px"; 
+  input.style.height = "20px";
   // input.style.padding = "10px";
   input.style.border = "1px solid #ccc";
   input.style.borderRadius = "5px";
@@ -34,16 +34,16 @@ function createCustomInput() {
     }
   });
 
-  // Hide input when clicking outside or pressing Enter
+
   input.addEventListener("blur", () => {
     if (!input.value) {
-      input.replaceWith(customTip); // Restore button if input is empty
+      input.replaceWith(customTip); 
     }
   });
 
   input.addEventListener("keypress", function (event) {
     if (event.key === "Enter") {
-      input.blur(); // Trigger blur event on Enter
+      input.blur(); 
     }
   });
 }
@@ -89,8 +89,8 @@ function calcTip() {
 reset.addEventListener("click", function () {
   peopleNumber.value = "";
   billInput.value = "";
-  tipPerPerson = "$0.00";
-  totalPerPerson = "$0.00";
+  tipPerPerson.textContent = "$0.00";
+  totalPerPerson.textContent  = "$0.00";
 });
 
 // function highlightBorder(inputField) {
