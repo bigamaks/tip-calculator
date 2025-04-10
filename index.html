@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
-
     <link
       rel="icon"
       type="image/png"
@@ -17,45 +16,73 @@
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style> -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
   </head>
   <body>
-<div class="box">
-  <div class="box-one">
-    <label for="bill" id="error">Bill</label>
-    <input type="" name="" id="bill" placeholder="">
-    <div>
-      <p>Select Tip</p>
-      <div class="five">
-        <button class="tip-btn" data-tip="5">5%</button>
-        <button class="tip-btn" data-tip="10">10%</button>
-        <button class="tip-btn" data-tip="15">15%</button>
-        <button class="tip-btn" data-tip="25">25%</button>
-        <button class="tip-btn" data-tip="50">50%</button>
-        <button class="tip-btn custom">Custom</button>
-        <!-- <input type="number" id="custom-tip" placeholder="Enter %" style="display: none;"> -->
+    <div class="container">
+      <div class="splitter-title">
+        <div class="row">
+          <span>S</span><span>P</span><span>L</span><span>I</span>
+        </div>
+        <div class="row">
+          <span>T</span><span>T</span><span>E</span><span>R</span>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="box-one">
+          <div class="input-wrapper">
+            <label for="bill" id="error">Bill</label>
+            <span class="icon" style="top: 50%">$</span>
+            <input type="" name="" id="bill" placeholder="" class="" />
+          </div>
+          <div>
+            <p>Select Tip %</p>
+            <div class="five">
+              <button class="tip-btn" data-tip="5">5%</button>
+              <button class="tip-btn" data-tip="10">10%</button>
+              <button class="tip-btn" data-tip="15">15%</button>
+              <button class="tip-btn" data-tip="25">25%</button>
+              <button class="tip-btn" data-tip="50">50%</button>
+              <button class="tip-btn custom">Custom</button>
+              <!-- <input type="number" id="custom-tip" placeholder="Enter %" style="display: none;"> -->
+            </div>
+          </div>
+          <div class="numPeople">
+            <label for="people">Number of People:</label>
+            <span id="error-people"></span>
+            <div class="input-wrapper">
+              <span class="icon">
+                <i class="fas fa-user"></i>
+                <!-- Font Awesome icon -->
+              </span>
+              <input type="text" name="" id="people" />
+            </div>
+          </div>
+        </div>
+        <div class="box-two">
+          <div class="tip-per-person">
+            <p class="tip">
+              Tip amount <br />
+              <span class="per">/ person</span>
+            </p>
+            <p id="tip-person">$0.00</p>
+          </div>
+          <div class="total-per-person">
+            <p>
+              Total amount <br />
+              <span class="per">/ person</span>
+            </p>
+            <p id="total-person">$0.00</p>
+          </div>
+          <div class="reset">RESET</div>
+        </div>
       </div>
     </div>
-    <div class="numPeople">
-      <label for="people">Number of People:</label>
-      <span  id="error-people"></span>
-      <input type="text" name="" id="people">
-    </div>
-  </div>
-  <div class="box-two">
-    <div class="tip-per-person">
-      <p class="tip">Tip amount <br/> <span class="per">/ person</span> </p>
-      <p id="tip-person">$0.00</p>
-    </div>
-    <div class="total-per-person">
-    <p>Total amount <br/> <span class="per">/ person</span></p>
-    <p id="total-person">$0.00</p>
-    </div>
-    <div class="reset">RESET</div>
-  </div>
-</div>
-
-
-
 
     <!-- Bill
 
@@ -82,6 +109,6 @@
     Coded by <a href="#">Your Name Here</a>.
   </div> -->
 
-  <script type="module" src="script.js"></script>
+    <script type="module" src="script.js"></script>
   </body>
 </html>
